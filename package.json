@@ -1,0 +1,10 @@
+{
+  "name": "langdu-pingce",
+  "version": "1.0.0",
+  "private": true,
+  "description": "《陈太丘与友期行》朗读评测 - 大屏+手机扫码上传+讯飞ISE真实打分",
+  "dependencies": {
+    "ws": "^8.17.0",
+    "@vercel/blob": "^0.26.0"
+  }
+}

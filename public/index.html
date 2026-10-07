@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>《陈太丘与友期行》朗读评测</title>
+<script src="/qrcode.min.js"></script>
+<style>
+:root{--bg:#efe5d1;--paper:#fffaf0;--paper2:#f7eedf;--ink:#493728;--muted:#806d58;--primary:#76543a;--accent:#b7834b;--line:#ddc9ac;--success:#557760;--warn:#ad7541;--danger:#a75a4d;--shadow:0 18px 45px rgba(93,63,35,.13)}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 20% 0%,#fff8ea 0,#efe5d1 50%,#e7d9c1 100%);color:var(--ink);font-family:"KaiTi","STKaiti","楷体",serif;min-height:100vh}
+.shell{max-width:1440px;margin:auto;padding:28px 32px 60px}
+.topbar{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:22px}
+.eyebrow{letter-spacing:.16em;color:var(--accent);font-size:14px}
+.title{font-size:clamp(30px,4vw,60px);margin:8px 0 4px;line-height:1.1}
+.subtitle{color:var(--muted);font-size:18px}
+.mode-badge,.room-badge{display:inline-flex;align-items:center;border:1px solid var(--line);background:rgba(255,250,240,.7);padding:9px 14px;border-radius:999px;color:var(--primary);font-size:15px;white-space:nowrap;margin-left:8px}
+.room-badge{border-color:#c9a86a;background:#fff4df;color:#8b5d31;font-weight:bold;letter-spacing:.1em}
+.paper{background:rgba(255,250,240,.88);border:1px solid rgba(118,84,58,.16);box-shadow:var(--shadow);border-radius:22px}
+.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(360px,.9fr);gap:22px}
+.card{padding:24px}
+.card h2,.card h3{margin:0 0 16px}
+.section-head{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:14px}
+.mini-title{color:var(--muted);font-size:14px}
+.text{font-size:clamp(20px,1.8vw,26px);line-height:2;text-align:justify}
+.text p{margin:0 0 18px}
+.stress{border-bottom:2px dotted var(--accent);font-weight:700}
+.guide{font-size:15px;line-height:1.7;color:var(--muted);background:var(--paper2);padding:12px 14px;border-radius:12px;margin-top:12px}
+.stack{display:grid;gap:18px}
+.btn{min-height:46px;border:0;border-radius:12px;padding:12px 17px;font-family:inherit;font-size:17px;cursor:pointer;transition:.2s;touch-action:manipulation}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--primary);color:#fffaf0}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-light{background:#f3e7d4;border:1px solid var(--line);color:var(--primary)}
+.btn-danger{background:#f6e3dc;border:1px solid #ddb4a4;color:var(--danger)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+.status{border:1px solid var(--line);background:var(--paper2);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.6}
+.status.ok{border-color:#b9cfc0;background:#eef4ef;color:var(--success)}
+.status.warn{border-color:#e0c79a;background:#faf1df;color:var(--warn)}
+.status.err{border-color:#ddb4a4;background:#f9e9e4;color:var(--danger)}
+.qr-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+.qr{width:190px;height:190px;background:#fffdf7;border:1px solid var(--line);border-radius:14px;padding:10px}
+.qr img,.qr canvas{width:100%;height:100%}
+.qr-note{font-size:14px;color:var(--muted);text-align:center;line-height:1.6;margin:0}
+.room-big{font-size:30px;letter-spacing:.25em;color:var(--primary);font-weight:bold}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.result-box{background:var(--paper2);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;font-size:15px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.result-box b{font-size:38px;color:var(--primary);line-height:1.1}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px}
+.tag{border:1px solid var(--line);background:var(--paper2);border-radius:999px;padding:6px 12px;font-size:14px;color:var(--primary)}
+.chart-wrap{width:100%;height:300px}
+.chart{width:100%;height:100%}
+.table-wrap{overflow-x:auto}
+table.compare{width:100%;border-collapse:collapse;font-size:15px}
+table.compare th,table.compare td{border:1px solid var(--line);padding:9px 10px;text-align:center}
+table.compare th{background:var(--paper2);color:var(--primary)}
+td.up{color:var(--success);font-weight:bold}
+td.down{color:var(--danger);font-weight:bold}
+.hidden{display:none!important}
+.pulse{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--danger);margin-right:7px;animation:pulse 1.1s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(167,90,77,.5)}70%{box-shadow:0 0 0 10px rgba(167,90,77,0)}100%{box-shadow:0 0 0 0 rgba(167,90,77,0)}}
+.rec-time{font-size:26px;color:var(--danger);font-weight:bold;min-width:78px;text-align:center}
+.file{font-family:inherit;font-size:15px;color:var(--muted)}
+.mobile-page{max-width:640px;margin:auto;padding:20px 16px 50px}
+.mobile-page .title{font-size:32px}
+.record-bar{display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+@media(max-width:950px){.shell{padding:20px 16px 40px}.grid{grid-template-columns:1fr}.topbar{display:block}.topbar .room-badge{margin-top:12px;margin-left:0}}
+@media(max-width:560px){.card{padding:17px}.result-grid{grid-template-columns:1fr 1fr}.title{font-size:34px}.qr{width:170px;height:170px}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+'use strict';
+/* ===== 房间号 ===== */
+function randomRoom(){var c='ABCDEFGHJKMNPQRSTUVWXYZ23456789';var s='';for(var i=0;i<5;i++)s+=c[Math.floor(Math.random()*c.length)];return s;}
+var qs=new URLSearchParams(location.search);
+var isMobile=qs.get('mode')==='mobile';
+var room=(qs.get('room')||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+if(!isMobile&&!room){room=randomRoom();qs.set('room',room);history.replaceState(null,'',location.pathname+'?'+qs.toString());}
+if(isMobile&&!room){room=randomRoom();qs.set('room',room);history.replaceState(null,'',location.pathname+'?'+qs.toString());}
+
+/* ===== 课文数据(保留原版朗读指导) ===== */
+var text=[
+ {body:'陈太丘与友期行，期日中。过中不至，太丘舍去，去后乃至。',guide:'开篇叙事，语速平稳；“期日中”重读，交代约定时间。'},
+ {body:'元方时年七岁，门外戏。',guide:'语气轻快，读出孩童天真。'},
+ {body:'客问元方：“尊君在不？”答曰：“待君久不至，已去。”',guide:'客有礼在先，宜平和；“久”“已去”读出陈述语气。'},
+ {body:'友人便怒曰：“非人哉！与人期行，相委而去。”',guide:'怒斥语气，音量提高、语速加快，读出“非人哉”的愤慨。'},
+ {body:'元方曰：“君与家君期日中。日中不至，则是无信；对子骂父，则是无礼。”',guide:'元方义正词严，一字一顿；“无信”“无礼”重读。'},
+ {body:'友人惭，下车引之。元方入门不顾。',guide:'收束沉稳；“惭”低缓，“不顾”干脆，余韵悠长。'}
+];
+function escapeHtml(s){return String(s).replace(/[&<>'"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c];});}
+function article(){return text.map(function(p,i){return '<p>'+escapeHtml(p.body).replace('期日中','<span class="stress">期日中</span>').replace('无信','<span class="stress">无信</span>').replace('无礼','<span class="stress">无礼</span>')+'<span class="guide">朗读提示：'+escapeHtml(p.guide)+'</span></p>';}).join('');}
+
+/* ===== 大屏端状态 ===== */
+var results=[]; var pollTimer=null;
+function render(){document.getElementById('app').innerHTML=isMobile?mobileTemplate():screenTemplate();if(!isMobile){makeQr();startPoll();}else{bindMobile();}}
+function screenTemplate(){var r1=results[0],r2=results[1];
+ var resultHtml='';
+ if(!r1){resultHtml='<div class="status warn">等待手机端上传录音……学生朗读后，请用老师手机扫码录音并上传，评测结果将自动出现在这里。</div>';}
+ else if(!r2){resultHtml=scoreBoxes(r1)+'<h3 style="margin-top:18px">问题提示</h3>'+issuesHtml(r1)+'<div class="status" style="margin-top:14px">第一次评测完成。学生再次朗读并上传后，将自动生成两次对比。</div>';}
+ else{resultHtml='<canvas id="chart" class="chart-wrap"></canvas>'+compareTable(r1,r2);}
+ return '<main class="shell"><header class="topbar"><div><div class="eyebrow">文言文朗读指导 · 课堂大屏</div><h1 class="title">陈太丘与友期行</h1><div class="subtitle">刘义庆《世说新语》 · 朗读表现评测</div></div><div><span class="room-badge">房间号 '+room+'</span><span class="mode-badge">真实评测 · 讯飞ISE</span></div></header><div class="grid"><section class="paper card"><div class="section-head"><h2>朗读指导原文</h2><span class="mini-title">停顿 · 重音 · 情感</span></div><div class="text">'+article()+'</div><div class="guide"><b>全文朗读要点：</b>注意叙事节奏与人物语气的变化；客人由急躁转为惭愧，元方始终清楚、坚定。下划线词语建议重读。</div></section><aside class="stack"><section class="paper card"><div class="section-head"><h2>扫码上传录音</h2><span class="mini-title">手机端入口</span></div><div class="qr-wrap"><div id="qrcode" class="qr"></div><div class="room-big">'+room+'</div><p class="qr-note">用手机微信扫码打开录音页。<br>学生朗读 → 手机录音上传 → 大屏自动打分。<br>录音最长 60 秒。</p></div><div class="status warn" id="screenStatus" style="margin-top:12px">等待手机端上传录音……</div></section><section class="paper card"><div class="section-head"><h2>'+(results.length===2?'两次评测对比':(results.length===1?'第一次评测':'本次评测'))+'</h2><span class="mini-title">自动分析</span></div>'+resultHtml+'<div class="actions"><button class="btn btn-danger" id="resetBtn">清空重来</button></div></section></aside></div></main>';}
+function scoreBoxes(r){return '<div class="result-grid"><div class="result-box">准确度<b>'+(r.accuracy==null?'—':r.accuracy)+'</b><span>声韵发音 · 0-100</span></div><div class="result-box">流利度<b>'+(r.fluency==null?'—':r.fluency)+'</b><span>语速连贯 · 0-100</span></div><div class="result-box">完整度<b>'+(r.integrity==null?'—':r.integrity)+'</b><span>有无漏读 · 0-100</span></div></div>';}
+function issuesHtml(r){return '<div class="status warn">'+r.issues.map(function(x){return '· '+escapeHtml(x);}).join('<br>')+'</div>';}
+function compareTable(a,b){var rows=[['准确度',a.accuracy,b.accuracy],['流利度',a.fluency,b.fluency],['完整度',a.integrity,b.integrity]];
+ var body=rows.map(function(row){var v1=row[1],v2=row[2];var diff=(v1==null||v2==null)?null:Math.round((v2-v1)*10)/10;var cell=diff==null?'—':(diff>=0?'<td class="up">+'+diff+'</td>':'<td class="down">'+diff+'</td>');return '<tr><td>'+row[0]+'</td><td>'+(v1==null?'—':v1)+'</td><td>'+(v2==null?'—':v2)+'</td>'+cell+'</tr>';}).join('');
+ var issA=a.issues.join('；'),issB=b.issues.join('；');
+ return '<div class="table-wrap"><table class="compare"><thead><tr><th>指标</th><th>第一次</th><th>第二次</th><th>变化</th></tr></thead><tbody>'+body+'<tr><td>问题提示</td><td style="text-align:left;font-size:13px">'+escapeHtml(issA)+'</td><td style="text-align:left;font-size:13px">'+escapeHtml(issB)+'</td><td class="up">对比</td></tr></tbody></table></div>';}
+function makeQr(){var box=document.getElementById('qrcode');if(!box)return;var mobileUrl=location.origin+location.pathname+'?mode=mobile&room='+room;try{if(window.QRCode)new QRCode(box,{text:mobileUrl,width:170,height:170,colorDark:'#493728',colorLight:'#fffdf7',correctLevel:QRCode.CorrectLevel.M});else box.textContent='二维码库未加载';}catch(e){box.textContent=mobileUrl;}}
+function startPoll(){if(pollTimer)clearInterval(pollTimer);pollTimer=setInterval(async function(){try{var r=await fetch('/api/state?room='+room,{cache:'no-store'});var j=await r.json();var nr=(j.results||[]);if(nr.length!==results.length){results=nr;render();}}catch(e){}},2500);}
+async function resetAll(){if(!confirm('确定清空本房间全部评测记录，重新开始吗？'))return;try{await fetch('/api/reset?room='+room);results=[];render();}catch(e){alert('清空失败：'+e.message);}}
+
+/* ===== 柱状图(Canvas 自绘, 中文习惯: 无涨跌色彩含义, 用古风双色区分两次) ===== */
+function drawChart(){var c=document.getElementById('chart');if(!c)return;var dpr=window.devicePixelRatio||1;var w=c.clientWidth||600,h=c.clientHeight||300;c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.scale(dpr,dpr);x.clearRect(0,0,w,h);
+ var pad={l:46,r:20,t:30,b:34},pw=w-pad.l-pad.r,ph=h-pad.t-pad.b;
+ x.strokeStyle='#ddc9ac';x.lineWidth=1;x.fillStyle='#806d58';x.font='12px KaiTi';x.textAlign='right';
+ for(var i=0;i<=5;i++){var y=pad.t+ph*i/5;x.beginPath();x.moveTo(pad.l,y);x.lineTo(w-pad.r,y);x.stroke();x.fillText(String(100-i*20),pad.l-8,y+4);}
+ var metrics=[['准确度',0],['流利度',1],['完整度',2]];var n=results.length;var groupW=pw/metrics.length;
+ var colors1=['#b7834b','#76543a'];var names=['第一次','第二次'];
+ x.textAlign='center';
+ metrics.forEach(function(m,mi){var cx=pad.l+groupW*mi+groupW/2;var bw=n===2?groupW*0.22:groupW*0.3;var gap=n===2?bw+10:0;var startX=cx-(n===2?gap/2+bw/2:bw/2);
+  for(var ri=0;ri<n;ri++){var v=results[ri][['accuracy','fluency','integrity'][m[1]]];if(v==null)continue;var bh=ph*v/100;var bx=startX+ri*gap;var by=pad.t+ph-bh;
+   x.fillStyle=colors1[ri];x.beginPath();x.roundRect?x.roundRect(bx,by,bw,bh,6):x.rect(bx,by,bw,bh);x.fill();
+   x.fillStyle=colors1[ri];x.font='14px KaiTi';x.fillText(String(v),bx+bw/2,by-7);}}
+  x.fillStyle='#493728';x.font='15px KaiTi';x.fillText(m[0],cx,h-10);});
+ if(n===2){x.font='13px KaiTi';var lx=pad.l+10;names.forEach(function(nm,ni){x.fillStyle=colors1[ni];x.fillRect(lx,10,14,10);x.fillStyle='#493728';x.textAlign='left';x.fillText(nm,lx+19,19);lx+=90;});}}
+
+/* 保留渲染后绘制图表的钩子 */
+var _origRender=render;render=function(){_origRender();if(!isMobile&&results.length===2){requestAnimationFrame(drawChart);}};
+window.addEventListener('resize',function(){if(!isMobile&&results.length===2)drawChart();});
+
+/* ===== 手机端 ===== */
+var mr=null,chunks=[],recTimer=null,recSeconds=0,pcmBlob=null;
+function mobileTemplate(){return '<main class="mobile-page"><header><div class="eyebrow">朗读录音 · 手机端</div><h1 class="title">陈太丘与友期行</h1><span class="room-badge">房间号 '+room+'</span></header><section class="paper card" style="margin-top:18px"><h2>请朗读全文</h2><div class="text" style="font-size:19px">'+article()+'</div></section><section class="paper card" style="margin-top:18px"><div class="section-head"><h2>录音上传</h2><span class="mini-title">最长 60 秒</span></div><div class="record-bar"><button class="btn btn-primary" id="recordBtn">开始录音</button><button class="btn btn-light" id="stopBtn" disabled>结束录音</button><span id="recTime" class="rec-time hidden">0s</span></div><span id="recordState" class="status" style="display:block;margin-top:12px">尚未录音</span><div style="margin-top:14px"><label class="file">或选择已有录音文件：<input class="file" id="audioFile" type="file" accept="audio/*"></label></div><button class="btn btn-accent" id="uploadBtn" disabled style="width:100%;margin-top:16px">上传到大屏评测</button><div id="mobileMsg" class="status hidden" style="margin-top:13px"></div></section></main>';}
+function bindMobile(){var rec=document.getElementById('recordBtn');if(rec)rec.onclick=startRec;var stop=document.getElementById('stopBtn');if(stop)stop.onclick=stopRec;var file=document.getElementById('audioFile');if(file)file.onchange=function(){pcmBlob=file.files[0];document.getElementById('uploadBtn').disabled=!pcmBlob;document.getElementById('recordState').textContent='已选择文件：'+pcmBlob.name;};var up=document.getElementById('uploadBtn');if(up)up.onclick=upload;}
+function startRec(){if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){document.getElementById('recordState').textContent='当前浏览器不支持录音，请改用下方“选择已有录音文件”';return;}
+ navigator.mediaDevices.getUserMedia({audio:true}).then(function(stream){
+  chunks=[];mr=new MediaRecorder(stream);
+  mr.ondataavailable=function(e){chunks.push(e.data);};
+  mr.onstop=function(){stream.getTracks().forEach(function(t){t.stop();});var blob=new Blob(chunks,{type:mr.mimeType||'audio/webm'});preparePcm(blob);};
+  mr.start();recSeconds=0;document.getElementById('recordBtn').disabled=true;document.getElementById('stopBtn').disabled=false;
+  document.getElementById('recTime').classList.remove('hidden');
+  document.getElementById('recordState').innerHTML='<span class="pulse"></span>正在录音，请开始朗读课文';
+  recTimer=setInterval(function(){recSeconds++;document.getElementById('recTime').textContent=recSeconds+'s';if(recSeconds>=60){stopRec();}},1000);
+ }).catch(function(){document.getElementById('recordState').textContent='未获得麦克风权限。请允许麦克风，或改用下方“选择已有录音文件”';});}
+function stopRec(){if(recTimer){clearInterval(recTimer);recTimer=null;}
+ if(mr&&mr.state!=='inactive')mr.stop();
+ var rb=document.getElementById('recordBtn');if(rb)rb.disabled=false;var sb=document.getElementById('stopBtn');if(sb)sb.disabled=true;}
+/* 任意格式音频 -> 解码 -> 重采样16k单声道 -> 16bit裸PCM */
+async function preparePcm(blob){var st=document.getElementById('recordState');st.textContent='正在处理音频…';
+ try{var ab=await blob.arrayBuffer();var AC=window.AudioContext||window.webkitAudioContext;var ctx=new AC();var audio=await ctx.decodeAudioData(ab);await ctx.close();
+  var off=new (window.OfflineAudioContext||window.webkitOfflineAudioContext)(1,Math.max(1,Math.ceil(audio.duration*16000)),16000);
+  var src=off.createBufferSource();src.buffer=audio;src.connect(off.destination);src.start();var rendered=await off.startRendering();
+  var ch=rendered.getChannelData(0);var buf=new ArrayBuffer(ch.length*2);var view=new DataView(buf);
+  for(var i=0;i<ch.length;i++){var s=Math.max(-1,Math.min(1,ch[i]));view.setInt16(i*2,s<0?s*0x8000:s*0x7FFF,true);}
+  pcmBlob=new Blob([buf],{type:'application/octet-stream'});
+  document.getElementById('uploadBtn').disabled=false;
+  st.textContent='录音完成（'+Math.round(audio.duration)+'秒），可点击上传评测';
+ }catch(e){st.textContent='音频处理失败：'+e.message+'。可改用“选择已有录音文件”重试';}}
+async function upload(){if(!pcmBlob)return;var msg=document.getElementById('mobileMsg');msg.classList.remove('hidden');msg.className='status';msg.textContent='正在上传并评测，约需 5~20 秒，请稍候……';
+ document.getElementById('uploadBtn').disabled=true;
+ try{var r=await fetch('/api/upload?room='+room,{method:'POST',body:pcmBlob});var j=await r.json();
+  if(j.ok){var s=j.result;msg.className='status ok';msg.innerHTML='评测完成！请看大屏结果。<br>准确度 '+(s.accuracy==null?'—':s.accuracy)+' · 流利度 '+(s.fluency==null?'—':s.fluency)+' · 完整度 '+(s.integrity==null?'—':s.integrity)+'<br>'+s.issues.map(escapeHtml).join('；');}
+  else{msg.className='status err';msg.textContent='评测失败：'+(j.error||'未知错误')+'。请把这条信息截图发给助手。';document.getElementById('uploadBtn').disabled=false;}
+ }catch(e){msg.className='status err';msg.textContent='上传失败：'+e.message+'。请检查网络后重试';document.getElementById('uploadBtn').disabled=false;}}
+
+render();
+</script>
+</body>
+</html>
